@@ -148,6 +148,4 @@ curl -X POST http://localhost:3000/api/movies \
 
 ## Integrantes
 
-- Nombre 1
-- Nombre 2
-- Nombre 3
+- Daniel Medina
