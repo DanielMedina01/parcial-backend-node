@@ -26,18 +26,6 @@ El servidor queda disponible en:
 http://localhost:3000
 ```
 
-Opcionalmente puede definir un secreto para los tokens:
-
-```bash
-JWT_SECRET=mi_secreto_seguro npm start
-```
-
-En PowerShell:
-
-```powershell
-$env:JWT_SECRET="mi_secreto_seguro"; npm start
-```
-
 ## Endpoints
 
 ### Registrar usuario
@@ -123,28 +111,6 @@ GET /api/movies/filter?yearGreaterThan=2000&maxPrice=30000
 Authorization: Bearer TOKEN_AQUI
 ```
 
-## Pruebas rapidas con curl
-
-```bash
-curl -X POST http://localhost:3000/api/auth/register \
-  -H "Content-Type: application/json" \
-  -d "{\"username\":\"admin1\",\"password\":\"123456\",\"role\":\"admin\"}"
-```
-
-```bash
-curl -X POST http://localhost:3000/api/auth/login \
-  -H "Content-Type: application/json" \
-  -d "{\"username\":\"admin1\",\"password\":\"123456\"}"
-```
-
-Copie el token recibido y uselo para crear una pelicula:
-
-```bash
-curl -X POST http://localhost:3000/api/movies \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer TOKEN_AQUI" \
-  -d "{\"title\":\"Interstellar\",\"director\":\"Christopher Nolan\",\"year\":2014,\"productora\":\"Paramount Pictures\",\"price\":25000}"
-```
 
 ## Integrantes
 
